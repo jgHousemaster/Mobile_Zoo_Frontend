@@ -1,2 +1,9 @@
 <!--pages/individualRecognize/index.wxml-->
-<text>pages/individualRecognize/index.wxml</text>
+<i-grid>
+    <i-grid-item bindtap="handler2">
+        <i-grid-icon>
+            <i-icon type="camera_fill" size="28"/>
+        </i-grid-icon>
+        <i-grid-label>个体识别</i-grid-label>
+    </i-grid-item>
+</i-grid>

@@ -10,19 +10,16 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  bindSpecTap: function () {
-    wx.navigateTo({
-      url: '../speciesRecognize/index'
-    })
-  },
-  bindIndiTap: function () {
-    wx.navigateTo({
-      url: '../individualRecognize/index'
+  handler1: function () {
+    wx.chooseImage({
+      sizeType: ['original', 'compressed'],  //可选择原图或压缩后的图片
+      sourceType: ['album', 'camera'], //可选择性开放访问相册、相机
+      success: res => {
+        const images = this.data.images.concat(res.tempFilePaths)
+        // 限制最多只能留下3张照片
+        this.data.images = images.length <= 3 ? images : images.slice(0, 3)
+        $digest(this)
+      }
     })
   },
   onLoad: function () {
