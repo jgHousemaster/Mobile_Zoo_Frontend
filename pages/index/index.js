@@ -15,6 +15,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  bandBtnTap: function () {
+    wx.navigateTo({
+      url: '../recognizePicture/index'
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
