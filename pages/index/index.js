@@ -15,7 +15,7 @@ Page({
       url: '../logs/logs'
     })
   },
-  bandBtnTap: function () {
+  bindBtnTap: function () {
     wx.navigateTo({
       url: '../recognizePicture/index'
     })
