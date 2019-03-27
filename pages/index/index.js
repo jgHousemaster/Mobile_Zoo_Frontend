@@ -15,9 +15,14 @@ Page({
       url: '../logs/logs'
     })
   },
-  bindBtnTap: function () {
+  bindSpecTap: function () {
     wx.navigateTo({
-      url: '../recognizePicture/index'
+      url: '../speciesRecognize/index'
+    })
+  },
+  bindIndiTap: function () {
+    wx.navigateTo({
+      url: '../individualRecognize/index'
     })
   },
   onLoad: function () {
