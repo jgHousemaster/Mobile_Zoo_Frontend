@@ -29,7 +29,7 @@ Page({
       }
     })*/
     wx.navigateTo({
-      url: "/pages/animalInfo/index"
+      url: "../animalInfo/index"
     })
   },
   onLoad: function () {

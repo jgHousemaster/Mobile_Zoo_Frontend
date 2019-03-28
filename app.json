@@ -6,7 +6,7 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f8f8f9",
     "navigationBarTitleText": "掌上动物园",
     "navigationBarTextStyle":"black"
   }
