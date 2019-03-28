@@ -18,16 +18,14 @@ Page({
     });
   },
   uploadHandler: function () {
-    /*wx.chooseImage({
-      sizeType: ['original', 'compressed'],  //可选择原图或压缩后的图片
-      sourceType: ['album', 'camera'], //可选择性开放访问相册、相机
+    wx.chooseImage({
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      count: 1,
       success: res => {
         const images = this.data.images.concat(res.tempFilePaths)
-        // 限制最多只能留下3张照片
-        this.data.images = images.length <= 3 ? images : images.slice(0, 3)
-        $digest(this)
       }
-    })*/
+    })
     wx.navigateTo({
       url: "../animalInfo/index"
     })

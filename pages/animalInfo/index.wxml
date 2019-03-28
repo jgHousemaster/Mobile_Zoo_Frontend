@@ -1,5 +1,13 @@
 <!--pages/animalInfo/index.wxml-->
+<view wx:if="{{current=='result'}}">
+  <view>图片</view>
+</view>
+
+<view wx:if="{{current=='intro'}}">
+  <text>简介</text>
+</view>
+
 <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
-  <i-tab-bar-item key="search" icon="search" current-icon="search" title="动物简介"></i-tab-bar-item>
-  <i-tab-bar-item key="about" icon="mine" current-icon="mine" title="动物图片"></i-tab-bar-item>
+  <i-tab-bar-item key="result" icon="search" current-icon="search" title="识别结果"></i-tab-bar-item>
+  <i-tab-bar-item key="intro" icon="document" current-icon="document" title="动物简介"></i-tab-bar-item>
 </i-tab-bar>

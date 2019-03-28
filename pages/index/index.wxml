@@ -7,9 +7,12 @@
   </div>
 </div>
 
-<i-panel title="开发者" wx:if="{{current=='about'}}">
-  <view style="padding: 15px;">某大创项目成员</view>
-</i-panel>
+<view class="textBlock" wx:if="{{current=='about'}}">
+  <text class="titleFont">关于我们\n</text>
+  <text style='line-height:100rpx'></text>
+  <text>四川大学掌上动物园团队\nver 0.0.2</text>
+</view>
+
 <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
   <i-tab-bar-item key="search" icon="search" current-icon="search" title="动物识别"></i-tab-bar-item>
   <i-tab-bar-item key="about" icon="mine" current-icon="mine" title="关于"></i-tab-bar-item>

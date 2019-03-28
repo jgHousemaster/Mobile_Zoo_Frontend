@@ -42,3 +42,14 @@
   margin-left: 24rpx;
   margin-top: 20rpx;
 }
+
+.textBlock{
+  padding: 40rpx;
+  padding-left: 80rpx;
+}
+
+.titleFont{
+  font-weight: bold;
+  font-size: 48rpx;
+  color: #1c2438;
+}
