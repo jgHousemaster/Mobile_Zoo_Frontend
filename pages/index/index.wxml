@@ -1,25 +1,13 @@
 <!--index.wxml-->
 <i-grid>
-    <i-grid-item bindtap="handler1">
+    <i-grid-item bindtap="uploadHandler">
         <i-grid-icon>
             <i-icon type="camera_fill" size="28"/>
         </i-grid-icon>
         <i-grid-label>拍照识别</i-grid-label>
     </i-grid-item>
 </i-grid>
- 
-<!--
-<i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
-  <button class="button" hover-class="hover" bindtap="bindSpecTap">物种识别</button>
-  <text>\n\n\n</text>
-  <button class="button" hover-class="hover" bindtap="bindIndiTap">个体识别</button>
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>-->
+<i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
+    <i-tab-bar-item key="search" icon="search" current-icon="search" title="动物搜索"></i-tab-bar-item>
+    <i-tab-bar-item key="about" icon="mine" current-icon="mine" dot title="关于"></i-tab-bar-item>
+</i-tab-bar>

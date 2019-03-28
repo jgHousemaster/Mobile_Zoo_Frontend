@@ -2,8 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/speciesRecognize/index",
-    "pages/individualRecognize/index"
+    "pages/animalInfo/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

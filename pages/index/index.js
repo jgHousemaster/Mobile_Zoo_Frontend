@@ -1,16 +1,23 @@
 //index.js
 //获取应用实例
+
 const app = getApp()
 
 Page({
   data: {
+    current:"search",
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  handler1: function () {
+  handleChange({ detail }) {
+    this.setData({
+      current: detail.key
+    });
+  },
+  uploadHandler: function () {
     wx.chooseImage({
       sizeType: ['original', 'compressed'],  //可选择原图或压缩后的图片
       sourceType: ['album', 'camera'], //可选择性开放访问相册、相机
@@ -21,6 +28,7 @@ Page({
         $digest(this)
       }
     })
+    wx.navigateTo("/pages/animalInfo")
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

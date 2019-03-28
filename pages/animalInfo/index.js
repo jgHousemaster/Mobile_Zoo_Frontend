@@ -1,4 +1,4 @@
-// pages/recognizePicture/index.js
+// pages/animalInfo/index.js
 Page({
 
   /**
