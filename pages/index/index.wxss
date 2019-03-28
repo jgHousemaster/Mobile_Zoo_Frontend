@@ -21,18 +21,24 @@
   margin-top: 200px;
 } */
 
-.test{
-  position:absolute;
-  margin-top:50%;
-  margin-left:50%;
+.block {
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 50%;
 }
-.test2{
-  position:inherit;
-  margin-left:-50px;
-  margin-top:0px;
+
+.circle {
+  position: inherit;
+  margin-left: -155rpx;
+  margin-top: 0rpx;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+  border: 6px solid rgb(0, 0, 0);
 }
-.test3{
-  position:inherit;
-  margin-left:-28px;
-  margin-top:90px;
+
+.cameraPos {
+  position: inherit;
+  margin-left: 24rpx;
+  margin-top: 20rpx;
 }
