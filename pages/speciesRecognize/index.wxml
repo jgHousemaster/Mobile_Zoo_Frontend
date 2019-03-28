@@ -1,2 +1,9 @@
-<!--pages/recognizePicture/index.wxml-->
-<text>这里应该有点东西</text>
+<!--pages/speciesRecognize/index.wxml-->
+<i-grid>
+    <i-grid-item bindtap="handler1">
+        <i-grid-icon>
+            <i-icon type="camera_fill" size="28"/>
+        </i-grid-icon>
+        <i-grid-label>物种识别</i-grid-label>
+    </i-grid-item>
+</i-grid>

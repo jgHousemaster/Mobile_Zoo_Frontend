@@ -1,6 +1,6 @@
 <!--pages/individualRecognize/index.wxml-->
 <i-grid>
-    <i-grid-item bindtap="handler2">
+    <i-grid-item bindtap="handler">
         <i-grid-icon>
             <i-icon type="camera_fill" size="28"/>
         </i-grid-icon>
