@@ -1,0 +1,5 @@
+<!--pages/animalInfo/index.wxml-->
+<i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
+    <i-tab-bar-item key="search" icon="search" current-icon="search" title="动物简介"></i-tab-bar-item>
+    <i-tab-bar-item key="about" icon="mine" current-icon="mine" dot title="动物图片"></i-tab-bar-item>
+</i-tab-bar>

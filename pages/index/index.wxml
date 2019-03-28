@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<i-grid wx:if="{{current==\"search\" && !hasInfo}}">
+    <i-grid-item bindtap="uploadHandler">
+        <i-grid-icon>
+            <i-icon type="camera_fill" size="28"/>
+        </i-grid-icon>
+        <i-grid-label>拍照识别</i-grid-label>
+    </i-grid-item>
+</i-grid>
+<i-panel title="开发者" wx:if="{{current==\"about\"}}">
+    <view style="padding: 15px;">某大创项目成员</view>
+</i-panel>
+<i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
+    <i-tab-bar-item key="search" icon="search" current-icon="search" title="动物搜索"></i-tab-bar-item>
+    <i-tab-bar-item key="about" icon="mine" current-icon="mine" dot title="关于"></i-tab-bar-item>
+</i-tab-bar>
