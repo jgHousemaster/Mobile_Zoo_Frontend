@@ -18,7 +18,7 @@ Page({
     });
   },
   uploadHandler: function () {
-    wx.chooseImage({
+    /*wx.chooseImage({
       sizeType: ['original', 'compressed'],  //可选择原图或压缩后的图片
       sourceType: ['album', 'camera'], //可选择性开放访问相册、相机
       success: res => {
@@ -27,8 +27,10 @@ Page({
         this.data.images = images.length <= 3 ? images : images.slice(0, 3)
         $digest(this)
       }
+    })*/
+    wx.navigateTo({
+      url: "/pages/animalInfo/index"
     })
-    wx.navigateTo("/pages/animalInfo")
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
