@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<div class="block" wx:if="{{current=='search'}}">
+<div class="centerPos" wx:if="{{current=='search'}}">
   <div class="circle" bindtap='uploadHandler'>
     <div class="cameraPos">
       <i-icon type="camera" size="120" />
