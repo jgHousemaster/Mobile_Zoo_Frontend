@@ -1,5 +1,5 @@
 <!--pages/featrueInfo/index.wxml-->
-<view class='backSize'></view>
+
 <view class='pos'>
   <text style='font-size:48rpx'>功能介绍</text>
   <view class='line'></view>

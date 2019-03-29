@@ -1,5 +1,5 @@
 <!--pages/aboutUs/index.wxml-->
-<view class='backSize'></view>
+
 <view class='pos'>
   <text style='font-size:48rpx'>关于开发者</text>
   <view class='line'></view>

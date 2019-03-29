@@ -1,5 +1,4 @@
 <!--index.wxml-->
-<view class='backSize'></view>
 <div class="centerPos" wx:if="{{current=='search'}}">
   <div class="circle" bindtap='uploadHandler'>
     <div class="cameraPos">

@@ -1,5 +1,5 @@
 <!--pages/animalInfo/index.wxml-->
-<view class='backSize'></view>
+
 <view class='pos' wx:if="{{current=='result'}}">
   <image src='./大熊猫例.jpg' class='bigImageArea'></image>
   <view class='crossLine'></view>
