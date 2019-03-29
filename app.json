@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/featureInfo/index",
+    "pages/aboutUs/index",
     "pages/logs/logs",
     "pages/animalInfo/index"
   ],

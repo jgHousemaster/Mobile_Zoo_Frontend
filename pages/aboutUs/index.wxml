@@ -1,0 +1,9 @@
+<!--pages/aboutUs/index.wxml-->
+<view class='backSize'></view>
+<view class='pos'>
+  <text style='font-size:48rpx'>关于开发者</text>
+  <view class='line'></view>
+  <view class='textArea'>
+    <text style='font-size:36rpx' space="ensp">我们是SCU掌上动物园开发团队\n联系方式\n  QQ:\n  电话:</text>
+  </view>
+</view>

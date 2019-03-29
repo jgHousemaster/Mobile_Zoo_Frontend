@@ -1,10 +1,16 @@
 <!--pages/animalInfo/index.wxml-->
+<view class='backSize'></view>
 <view wx:if="{{current=='result'}}">
   <view>图片</view>
 </view>
 
-<view wx:if="{{current=='intro'}}">
-  <text>简介</text>
+<view class='pos' wx:if="{{current=='intro'}}">
+  <view class='titlePos'>
+    <text class='titleFont'>dà xióng māo\n大熊猫\n</text>
+    <text class='titleFont' style=' color:#495060;font-style:oblique'>Ailuropoda melanoleuca</text>
+  </view>
+  <view class='tag1'></view>
+  <view class='tag2'></view>
 </view>
 
 <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">

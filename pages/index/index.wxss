@@ -70,7 +70,7 @@
 }
 
 .cellFont{
-  font-size: 32rpx !important;
+  font-size: 36rpx !important;
 }
 
 .bottomFont{
@@ -80,15 +80,15 @@
 
 
 
-/* .backSize{
+.backSize{
   position: absolute;
   margin-left: 0rpx;
   margin-top: 0rpx;
   width: 750rpx;
   height: 1200rpx;
-  background: #2b85e4;
+  background: #f8f8f9;
 }
-
+/*
 .backSquare{
   position: absolute;
   margin-left: 100rpx;

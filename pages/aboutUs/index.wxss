@@ -1,0 +1,31 @@
+/* pages/aboutUs/index.wxss */
+/* pages/featrueInfo/index.wxss */
+.pos{
+  position: absolute;
+  margin-top: 30rpx;
+  margin-left: 50rpx;
+}
+
+.line{
+  position: relative;
+  margin-top: 20rpx;
+  width: 650rpx;
+  border-bottom: 1px #e9eaec solid;
+}
+
+.textArea{
+  position: relative;
+  margin-top: 20rpx;
+  width: 650rpx;
+  height: 800rpx;
+  line-height: 60rpx;
+}
+
+.backSize{
+  position: absolute;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  width: 750rpx;
+  height: 1200rpx;
+  background: #f8f8f9;
+}

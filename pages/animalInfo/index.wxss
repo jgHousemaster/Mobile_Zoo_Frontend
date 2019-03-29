@@ -1,1 +1,52 @@
 /* pages/animalInfo/index.wxss */
+.backSize{
+  position: absolute;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  width: 750rpx;
+  height: 1200rpx;
+  background: #f8f8f9;
+}
+
+.pos{
+  position: absolute;
+  margin: 30rpx;
+}
+
+.titlePos{
+  position: relative;
+  width: 690rpx;
+  height: 200rpx;
+  line-height: 60rpx;
+}
+
+.titleFont{
+  font-size: 40rpx;
+  color: #1c2438
+}
+
+.textFont{
+  font-size: 32rpx;
+  color: #495060
+}
+
+.tag1{
+  position: relative;
+  margin: 10rpx;
+  margin-top: -6rpx;
+  height: 60rpx;
+  width: 160rpx;
+  background: #5cadff;
+  border-radius: 15%;
+}
+
+/* .tag2{
+  position: relative;
+  margin: 10rpx;
+  margin-top: -6rpx;
+  margin-left: 300rpx;
+  height: 60rpx;
+  width: 160rpx;
+  background: #5cadff;
+  border-radius: 15%;
+} */
