@@ -1,41 +1,39 @@
 <!--pages/animalInfo/index.wxml-->
 
 <view class='pos' wx:if="{{current=='result'}}">
-  <image src='./大熊猫例.jpg' class='bigImageArea'></image>
+  <image src='panda0.jpg' class='bigImageArea'></image>
   <view class='crossLine'></view>
+  <view class='titleArea titleFont'>物种识别结果\n</view>
   <view class='textArea'>
-    <text class='titleFont'>物种识别结果\n</text>
     <text class='textFont'> 大熊猫:100%</text>
   </view>
   <view class='crossLine'></view>
+  <view class='titleArea titleFont'>个体识别结果\n</view>
   <view class='textArea'>
-    <text class='titleFont'>个体识别结果\n</text>
     <text class='textFont'> 团团:65%\n圆圆:32%</text>
   </view>
 </view>
 
 <view class='pos' wx:if="{{current=='intro'}}">
-  <view class='titleArea'>
-    <text class='titleFont'>dà xióng māo\n大熊猫\n</text>
-    <text class='titleFont' style=' color:#495060;font-style:oblique'>Giant Panda\nAiluropoda melanoleuca</text>
-  </view>
+  <text class='titleArea titleFont'>dà xióng māo\n</text>
+  <text class='titleArea titleFont'>大熊猫\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Giant Panda\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Ailuropoda melanoleuca</text>
   <view class='tagArea'>
     <view class='tag'>熊科</view>
     <view class='tag'>大熊猫属</view>
   </view>
   <view class='imageArea'>
-    <image src='大熊猫1.jpg' class='imageFormat'></image>
-    <image src='大熊猫2.jpg' class='imageFormat'></image>
-    <image src='大熊猫3.jpg' class='imageFormat'></image>
+    <image src='panda1.jpg' class='imageFormat'></image>
+    <image src='panda2.jpg' class='imageFormat'></image>
+    <image src='panda3.jpg' class='imageFormat'></image>
   </view>
+  <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
-    <text class='titleFont'>动物简介\n</text>
     <text class='textFont'>大熊猫属于食肉目、熊科、大熊猫亚科和大熊猫属唯一的哺乳动物，被誉为"活化石"和"中国国宝"，是世界上最可爱的动物之一。</text>
   </view>
   <view class='crossLine'></view>
-  <view class='textArea'>
-    <text class='titleFont'>相关知识</text>
-  </view>
+  <view class='titleArea titleFont'>相关知识</view>
 </view>
 
 <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
