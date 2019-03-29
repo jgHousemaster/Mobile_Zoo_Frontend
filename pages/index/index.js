@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-
+const { $Toast } = require('../../dist/base/index');
 const app = getApp()
 
 Page({
@@ -24,6 +24,9 @@ Page({
       count: 1,
       success: res => {
         const tempFilePaths = res.tempFilePaths
+        wx.showLoading({
+          title: '加载中',
+        })
         wx.uploadFile({
           url: 'http://39.105.123.109/', // 仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
@@ -41,6 +44,9 @@ Page({
             wx.navigateTo({
               url: '/pages/animalInfo/index',
             })
+          },
+          complete() {
+            wx.hideLoading()
           }
         })
       }

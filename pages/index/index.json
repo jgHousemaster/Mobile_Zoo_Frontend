@@ -12,6 +12,7 @@
     "i-tab-bar-item": "/dist/tab-bar-item/index",
     "i-panel": "../../dist/panel/index",
     "i-cell-group": "../../dist/cell-group/index",
-    "i-cell": "../../dist/cell/index"
+    "i-cell": "../../dist/cell/index",
+    "i-toast": "../../dist/toast/index"
   }
 }

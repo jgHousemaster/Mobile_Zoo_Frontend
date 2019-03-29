@@ -1,8 +1,7 @@
 {
   "pages":[
-    "pages/animalInfo/index",
     "pages/index/index",
-    
+    "pages/animalInfo/index", 
     "pages/featureInfo/index",
     "pages/aboutUs/index",
     "pages/logs/logs"
