@@ -38,6 +38,9 @@ Page({
               icon: 'success',
               duration: 2000
             })
+            wx.navigateTo({
+              url: '/pages/animalInfo/index',
+            })
           }
         })
       }

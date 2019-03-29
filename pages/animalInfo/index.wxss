@@ -10,14 +10,30 @@
 
 .pos{
   position: absolute;
-  margin: 30rpx;
+  margin: 40rpx;
 }
 
-.titlePos{
+.crossLine{
   position: relative;
-  width: 690rpx;
-  height: 200rpx;
+  margin-left: -40rpx;
+  height: 40rpx;
+  width: 750rpx;
+  background: #e9eaec
+}
+
+.titleArea{
+  position: relative;
+  width: 670rpx;
+  height: 260rpx;
   line-height: 60rpx;
+}
+
+.textArea{
+  position: relative;
+  width: 670rpx;
+  height: 240rpx;
+  margin-top: 20rpx; 
+  line-height: 54rpx;
 }
 
 .titleFont{
@@ -30,23 +46,46 @@
   color: #495060
 }
 
-.tag1{
+.tagArea{
+  display: flex;
+  flex-direction: row;
   position: relative;
-  margin: 10rpx;
-  margin-top: -6rpx;
+  width: 670rpx;
   height: 60rpx;
-  width: 160rpx;
-  background: #5cadff;
-  border-radius: 15%;
 }
 
-/* .tag2{
+.imageArea{
+  display: flex;
+  flex-direction: row;
   position: relative;
-  margin: 10rpx;
-  margin-top: -6rpx;
-  margin-left: 300rpx;
+  margin-top: 30rpx;
+  width: 670rpx;
+  height: 240rpx;
+}
+
+.bigImageArea{
+  position: relative;
+  margin-bottom: 40rpx; 
+  width: 670rpx;
+  height: 377rpx;
+}
+
+.imageFormat{
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 10rpx;
+  border-radius: 20rpx;
+}
+
+.tag{
   height: 60rpx;
-  width: 160rpx;
+  width: 180rpx;
+  margin-right: 30rpx;
   background: #5cadff;
-  border-radius: 15%;
-} */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  border-radius: 20rpx;
+}

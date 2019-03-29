@@ -1,10 +1,11 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/animalInfo/index",
     "pages/featureInfo/index",
     "pages/aboutUs/index",
-    "pages/logs/logs",
-    "pages/animalInfo/index"
+    "pages/logs/logs"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
