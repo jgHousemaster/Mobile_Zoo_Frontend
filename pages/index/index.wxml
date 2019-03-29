@@ -8,13 +8,20 @@
 </div>
 
 <div wx:if="{{current=='about'}}">
-  <i-panel title="关于我们">
-    <view style="padding: 15px;">四川大学掌上动物园团队</view>
-  </i-panel>
-  <i-panel title="版本">
-    <view style="padding: 15px;">v 0.0.2</view>
-  </i-panel>
+  <view class='logo'></view>
+  <view class='version'>
+    <text class='titleFont'>掌上动物园\n</text>
+    <text class='versionFont'>Version 1.0.0</text>
+  </view>
+  <i-cell-group class="cellPos">
+    <i-cell i-class="cellFont" is-link>功能介绍</i-cell>
+    <i-cell i-class="cellFont" is-link url="/pages/dashboard/index">开发者</i-cell>
+  </i-cell-group>
+  <view class='bottomPos'>
+    <text class='bottomFont'>SCU掌上动物园团队 版权所有\nCopyright © 2018-2019 Mobile Zoo\nAll Rights Reserved</text>
+  </view>
 </div>
+
 
 <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
   <i-tab-bar-item key="search" icon="search" current-icon="search" title="动物识别"></i-tab-bar-item>

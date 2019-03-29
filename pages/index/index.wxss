@@ -1,26 +1,5 @@
 /**index.wxss**/
 
-/* .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-} */
-
-/* .userinfo-nickname {
-  color: rgb(0, 0, 0);
-}
-
-.usermotto {
-  margin-top: 200px;
-} */
-
 .centerPos {
   position: absolute;
   margin-top: 50%;
@@ -43,18 +22,65 @@
   margin-top: 24rpx;
 }
 
-.textBlock{
-  padding: 40rpx;
-  padding-left: 80rpx;
+
+
+.logo{
+  position: absolute;
+  margin-left: 300rpx;
+  margin-top: 200rpx;
+  width: 150rpx;
+  height: 150rpx;
+  background:  #2b85e4;
+  border-radius: 10%;
+}
+
+.version{
+  position: absolute;
+  margin-left: 0rpx;
+  margin-top: 400rpx;
+  width: 750rpx;
+  height: 100rpx;
+  text-align: center;
+}
+
+.cellPos{
+  position: absolute;
+  margin-left: 80rpx;
+  margin-top: 560rpx;
+  width: 590rpx;
+}
+
+.bottomPos{
+  position: absolute;
+  margin-left: 0rpx;
+  margin-top: 960rpx;
+  width: 750rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 26rpx;
 }
 
 .titleFont{
   font-weight: bold;
   font-size: 48rpx;
-  color: #1c2438;
 }
 
-.backSize{
+.versionFont{
+  font-size: 32rpx;
+}
+
+.cellFont{
+  font-size: 32rpx !important;
+}
+
+.bottomFont{
+  font-size: 24rpx;
+  color:#80848f
+}
+
+
+
+/* .backSize{
   position: absolute;
   margin-left: 0rpx;
   margin-top: 0rpx;
@@ -71,4 +97,25 @@
   height: 900rpx;
   border-radius: 8%;
   background: #dddee1;
+} */
+
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+} */
+
+/* .userinfo-nickname {
+  color: rgb(0, 0, 0);
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
