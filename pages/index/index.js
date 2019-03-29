@@ -18,6 +18,27 @@ Page({
     });
   },
   uploadHandler: function () {
+    wx.chooseImage({
+      success(res) {
+        const tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: 'http://39.105.123.109/', // 仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'pic',
+          formData: {
+            user: 'test'
+          },
+          success(res) {
+            const data = JSON.parse(res.data)
+            wx.showToast({
+              title: data.status,
+              icon: 'success',
+              duration: 2000
+            })
+          }
+        })
+      }
+    })
     /*wx.chooseImage({
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
@@ -26,7 +47,7 @@ Page({
         const images = this.data.images.concat(res.tempFilePaths)
       }
     })*/
-    wx.request({
+    /*wx.request({
       url: 'http://39.105.123.109',
       data: {
       },
@@ -43,7 +64,7 @@ Page({
     })
     wx.navigateTo({
       url: "/pages/animalInfo/index"
-    })
+    })*/
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
