@@ -1,12 +1,12 @@
 //index.js
 //获取应用实例
 const { $Toast } = require('../../dist/base/index');
-const app = getApp()
-
+const app = getApp();
+var globalId = "0";
+var globalStatus = "init";
 Page({
   data: {
     current:"search",
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -28,28 +28,41 @@ Page({
           title: '加载中',
         })
         wx.uploadFile({
-          url: 'https://zoo.scubrl.org/upload/', // 仅为示例，非真实的接口地址
+          url: 'https://zoo.scubrl.org/upload/', 
           filePath: tempFilePaths[0],
           name: 'pic',
           formData: {
             user: 'test'
           },
           success(res) {
-            const data = JSON.parse(res.data)
-            wx.showToast({
-              title: data.status,
-              icon: 'success',
-              duration: 2000
-            })
-            wx.navigateTo({
-              url: '/pages/animalInfo/index',
-            })
-            wx.hideLoading()
+            var tmp = JSON.parse(res.data)
+            globalId = tmp.id
+            globalStatus = tmp.status
           },
-          complete() {
-            //wx.hideLoading()
-          }
         })
+        while(globalStatus != 'done'){
+          wx.request({
+            url: 'https://zoo.scubrl.org/getStatus/',
+            data: {
+              id: globalId
+            },
+            method: 'post',
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success(res) {
+              globalStatus = res.data.slice(8)
+              console.log(globalStatus)
+              if (globalStatus == "done")
+                wx.hideLoading()
+                wx.navigateTo({
+                  url: '/pages/animalInfo/index',
+                })
+            }
+          })
+          //setTimeout(function () {},5)
+          globalStatus = 'done'
+        }
       }
     })
   },
