@@ -1,11 +1,39 @@
 //index.js
 //获取应用实例
-const { $Toast } = require('../../dist/base/index');
 const app = getApp();
-var globalId = "0";
-var globalStatus = "init";
+function request(tmp_status, tmp_id) {
+  if (tmp_status != 'done') {
+    wx.request({
+      url: 'https://zoo.scubrl.org/getStatus/',
+      data: {
+        id: tmp_id
+      },
+      method: 'post',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        tmp_status = res.data.status
+        if (tmp_status == "done") {
+          wx.hideLoading()
+          wx.navigateTo({
+            url: '/pages/animalInfo/index',
+          })
+        }
+        else{
+          setTimeout(function () {
+            request(tmp_status, tmp_id)
+          }, 1000)
+        }
+      }
+    })
+  }
+};
+
 Page({
   data: {
+    id: '',
+    status: '',
     current:"search",
     userInfo: {},
     hasUserInfo: false,
@@ -36,37 +64,14 @@ Page({
           },
           success(res) {
             var tmp = JSON.parse(res.data)
-            globalId = tmp.id
-            globalStatus = tmp.status
+            request(tmp.status, tmp.id)
           },
         })
-        while(globalStatus != 'done'){
-          wx.request({
-            url: 'https://zoo.scubrl.org/getStatus/',
-            data: {
-              id: globalId
-            },
-            method: 'post',
-            header: {
-              'content-type': 'application/json' // 默认值
-            },
-            success(res) {
-              globalStatus = res.data.slice(8)
-              console.log(globalStatus)
-              if (globalStatus == "done")
-                wx.hideLoading()
-                wx.navigateTo({
-                  url: '/pages/animalInfo/index',
-                })
-            }
-          })
-          //setTimeout(function () {},5)
-          globalStatus = 'done'
-        }
       }
     })
   },
   onLoad: function () {
+    var that = this;
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
