@@ -28,7 +28,7 @@ Page({
           title: '加载中',
         })
         wx.uploadFile({
-          url: 'http://39.105.123.109/', // 仅为示例，非真实的接口地址
+          url: 'https://zoo.scubrl.org/upload/', // 仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
           name: 'pic',
           formData: {
@@ -44,9 +44,10 @@ Page({
             wx.navigateTo({
               url: '/pages/animalInfo/index',
             })
+            wx.hideLoading()
           },
           complete() {
-            wx.hideLoading()
+            //wx.hideLoading()
           }
         })
       }
