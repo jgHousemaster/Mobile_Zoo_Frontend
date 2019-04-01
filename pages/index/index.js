@@ -33,8 +33,6 @@ function request(tmp_status, tmp_id) {
 
 Page({
   data: {
-    id: '',
-    status: '',
     current:"search",
     userInfo: {},
     hasUserInfo: false,
@@ -42,36 +40,41 @@ Page({
   },
   //事件处理函数
   handleChange({ detail }) {
-    this.setData({
-      current: detail.key
-    });
+    if (app.globalData.uploading == 0){
+      this.setData({
+        current: detail.key
+      });
+    }
   },
   uploadHandler: function () {
-    wx.chooseImage({
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      count: 1,
-      success: res => {
-        const tempFilePaths = res.tempFilePaths
-        wx.showLoading({
-          title: '加载中',
-        })
-        wx.uploadFile({
-          url: 'https://zoo.scubrl.org/upload/', 
-          filePath: tempFilePaths[0],
-          name: 'pic',
-          formData: {
-            user: 'test'
-          },
-          success(res) {
-            var tmp = JSON.parse(res.data)
-            app.globalData.globalId = tmp.id
-            console.log(app.globalData.globalId)
-            request(tmp.status, tmp.id)
-          },
-        })
-      }
-    })
+    if(app.globalData.uploading == 0){
+      app.globalData.uploading = 1;
+      wx.chooseImage({
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera'],
+        count: 1,
+        success: res => {
+          const tempFilePaths = res.tempFilePaths
+          wx.showLoading({
+            title: '加载中',
+          })
+          wx.uploadFile({
+            url: 'https://zoo.scubrl.org/upload/',
+            filePath: tempFilePaths[0],
+            name: 'pic',
+            formData: {
+              user: 'test'
+            },
+            success(res) {
+              var tmp = JSON.parse(res.data)
+              app.globalData.globalId = tmp.id
+              console.log(app.globalData.globalId)
+              request(tmp.status, tmp.id)
+            },
+          })
+        }
+      })
+    }
   },
   onLoad: function () {
     var that = this;

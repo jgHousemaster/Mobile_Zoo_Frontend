@@ -35,6 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    globalId: {}
+    globalId: {},
+    uploading: 0
   }
 })
