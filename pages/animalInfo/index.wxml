@@ -1,7 +1,7 @@
 <!--pages/animalInfo/index.wxml-->
 
 <view class='pos' wx:if="{{current=='result'}}">
-  <image src='panda0.jpg' class='bigImageArea'></image>
+  <image wx:if="{{picUrl.length > 0}}" src= '{{picUrl}}' class='bigImageArea' mode='aspectFit'></image>
   <view class='crossLine'></view>
   <view class='titleArea titleFont'>物种识别结果\n</view>
   <view class='textArea'>

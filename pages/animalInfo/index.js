@@ -1,4 +1,6 @@
 // pages/animalInfo/index.js
+const app = getApp();
+
 Page({
 
   /**
@@ -6,6 +8,7 @@ Page({
    */
   data: {
     current: "result",
+    picUrl: {}
   },
   handleChange({ detail }) {
     this.setData({
@@ -16,7 +19,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+        picUrl: 'https://zoo.scubrl.org/getPic/' + JSON.stringify(app.globalData.globalId).slice(1, -1) + '/'
+    })
   },
 
   /**

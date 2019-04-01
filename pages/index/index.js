@@ -14,6 +14,7 @@ function request(tmp_status, tmp_id) {
       },
       success(res) {
         tmp_status = res.data.status
+        console.log(tmp_status)
         if (tmp_status == "done") {
           wx.hideLoading()
           wx.navigateTo({
@@ -64,6 +65,8 @@ Page({
           },
           success(res) {
             var tmp = JSON.parse(res.data)
+            app.globalData.globalId = tmp.id
+            console.log(app.globalData.globalId)
             request(tmp.status, tmp.id)
           },
         })
