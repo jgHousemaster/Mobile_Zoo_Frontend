@@ -17,6 +17,20 @@ function request(tmp_status, tmp_id) {
         console.log(tmp_status)
         if (tmp_status == "done") {
           wx.hideLoading()
+          app.globalData.uploading = 0
+          wx.request({
+            url: 'https://zoo.scubrl.org/animalInfo/',
+            data: {
+              id: 0
+            },
+            method: 'POST',
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success(res) {
+              app.globalData.globalKind = res.data.name
+            }
+          })
           wx.navigateTo({
             url: '/pages/animalInfo/index',
           })
@@ -48,12 +62,12 @@ Page({
   },
   uploadHandler: function () {
     if(app.globalData.uploading == 0){
-      app.globalData.uploading = 1;
       wx.chooseImage({
         sizeType: ['original', 'compressed'],
         sourceType: ['album', 'camera'],
         count: 1,
         success: res => {
+          app.globalData.uploading = 1;
           const tempFilePaths = res.tempFilePaths
           wx.showLoading({
             title: '加载中',

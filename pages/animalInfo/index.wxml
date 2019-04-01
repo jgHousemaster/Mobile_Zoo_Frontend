@@ -5,7 +5,7 @@
   <view class='crossLine'></view>
   <view class='titleArea titleFont'>物种识别结果\n</view>
   <view class='textArea'>
-    <text class='textFont'> 大熊猫:100%</text>
+    <text class='textFont'> {{animalKind}}:100%</text>
   </view>
   <view class='crossLine'></view>
   <view class='titleArea titleFont'>个体识别结果\n</view>
