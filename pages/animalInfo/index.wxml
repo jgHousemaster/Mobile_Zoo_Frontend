@@ -5,12 +5,12 @@
   <view class='crossLine'></view>
   <view class='titleArea titleFont'>物种识别结果\n</view>
   <view class='textArea'>
-    <text class='textFont'> {{animalKind}}:100%</text>
+    <text class='textFont'> {{speciesResult}}</text>
   </view>
   <view class='crossLine'></view>
   <view class='titleArea titleFont'>个体识别结果\n</view>
   <view class='textArea'>
-    <text class='textFont'> 团团:65%\n圆圆:32%</text>
+    <text class='textFont'>该物种暂不支持个体识别</text>
   </view>
 </view>
 
@@ -32,8 +32,6 @@
   <view class='textArea'>
     <text class='textFont'>大熊猫属于食肉目、熊科、大熊猫亚科和大熊猫属唯一的哺乳动物，被誉为"活化石"和"中国国宝"，是世界上最可爱的动物之一。</text>
   </view>
-  <view class='crossLine'></view>
-  <view class='titleArea titleFont'>相关知识</view>
 </view>
 
 <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">

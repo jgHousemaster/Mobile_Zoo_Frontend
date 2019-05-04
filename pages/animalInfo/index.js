@@ -24,7 +24,7 @@ Page({
      picUrl: 'https://zoo.scubrl.org/getPic/' + JSON.stringify(app.globalData.globalId).slice(1, -1) + '/'
     })
     this.setData({
-      animalKind: app.globalData.globalKind
+      speciesResult: app.globalData.speciesResult
     })
   },
   /**

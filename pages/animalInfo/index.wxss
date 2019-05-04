@@ -32,7 +32,7 @@
 .textArea{
   position: relative;
   width: 670rpx;
-  height: 240rpx;
+  height: 220rpx;
   line-height: 54rpx;
 }
 

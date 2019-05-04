@@ -36,7 +36,7 @@ App({
   globalData: {
     userInfo: null,
     globalId: {},
-    globalKind: {},
+    speciesResult: {},
     uploading: 0
   }
 })

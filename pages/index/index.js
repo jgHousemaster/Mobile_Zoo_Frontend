@@ -18,19 +18,21 @@ function request(tmp_status, tmp_id) {
         if (tmp_status == "done") {
           wx.hideLoading()
           app.globalData.uploading = 0
-          wx.request({
-            url: 'https://zoo.scubrl.org/animalInfo/',
-            data: {
-              id: 0
-            },
-            method: 'POST',
-            header: {
-              'content-type': 'application/json' // 默认值
-            },
-            success(res) {
-              app.globalData.globalKind = res.data.name
-            }
-          })
+          app.globalData.speciesResult = res.data.result
+          // wx.request({
+          //   url: 'https://zoo.scubrl.org/getStatus/',
+          //   data: {
+          //     id: 0
+          //   },
+          //   method: 'POST',
+          //   header: {
+          //     'content-type': 'application/json' // 默认值
+          //   },
+          //   success(res) {
+          //     console.log(res)
+          //     app.globalData.globalKind = res.data.name
+          //   }
+          // })
           wx.navigateTo({
             url: '/pages/animalInfo/index',
           })
