@@ -9,7 +9,7 @@ Page({
   data: {
     current: "result",
     picUrl: {},
-    animalKind: {}
+    speciesResult: {}
   },
   handleChange({ detail }) {
     this.setData({
@@ -20,10 +20,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(app.globalData.speciesResult.length === 0){
+      app.globalData.speciesResult = "无物种识别结果"
+    }
     this.setData({
-     picUrl: 'https://zoo.scubrl.org/getPic/' + JSON.stringify(app.globalData.globalId).slice(1, -1) + '/'
-    })
-    this.setData({
+     picUrl: 'https://zoo.scubrl.org/getPic/' + JSON.stringify(app.globalData.globalId).slice(1, -1) + '/',
       speciesResult: app.globalData.speciesResult
     })
   },

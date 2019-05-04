@@ -11,7 +11,7 @@
   <view class='logo'></view>
   <view class='version'>
     <text class='titleFont'>掌上动物园\n</text>
-    <text class='versionFont'>Version 1.0.0</text>
+    <text class='versionFont'>Version 1.0.2</text>
   </view>
   <i-cell-group class="cellPos">
     <i-cell i-class="cellFont" is-link url="/pages/featureInfo/index">功能介绍</i-cell>
