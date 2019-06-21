@@ -8,10 +8,10 @@
 </div>
 
 <div wx:if="{{current=='about'}}">
-  <view class='logo'></view>
+  <image src='logo.png' class='logo'></image>
   <view class='version'>
     <text class='titleFont'>掌上动物园\n</text>
-    <text class='versionFont'>Version 1.0.2</text>
+    <text class='versionFont'>Version 1.0.3</text>
   </view>
   <i-cell-group class="cellPos">
     <i-cell i-class="cellFont" is-link url="/pages/featureInfo/index">功能介绍</i-cell>

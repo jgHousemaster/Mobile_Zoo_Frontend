@@ -14,7 +14,7 @@
   </view>
 </view>
 
-<view class='pos' wx:if="{{current=='intro'}}">
+<view class='pos' wx:if="{{current=='intro' && speciesType==0}}">
   <text class='titleArea titleFont'>dà xióng māo\n</text>
   <text class='titleArea titleFont'>大熊猫\n</text>
   <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Giant Panda\n</text>
@@ -31,6 +31,86 @@
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
     <text class='textFont'>大熊猫属于食肉目、熊科、大熊猫亚科和大熊猫属唯一的哺乳动物，被誉为"活化石"和"中国国宝"，是世界上最可爱的动物之一。</text>
+  </view>
+</view>
+
+<view class='pos' wx:elif="{{current=='intro' && speciesType==1}}">
+  <text class='titleArea titleFont'>xiǎo xióng māo\n</text>
+  <text class='titleArea titleFont'>小熊猫\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Red Panda\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Ailurus fulgens</text>
+  <view class='tagArea'>
+    <view class='tag'>小熊猫科</view>
+    <view class='tag'>小熊猫属</view>
+  </view>
+  <view class='imageArea'>
+    <image src='redpanda1.jpg' class='imageFormat'></image>
+    <image src='redpanda2.jpg' class='imageFormat'></image>
+    <image src='redpanda3.jpg' class='imageFormat'></image>
+  </view>
+  <text class=' titleArea titleFont'>动物简介\n</text>
+  <view class='textArea'>
+    <text class='textFont'>小熊猫，小熊猫科小熊猫属的一种动物。外形像猫，但较猫肥大，全身红褐色。圆脸，吻部较短，脸颊有白色斑纹。耳大，直立向前。四肢粗短，为黑褐色。尾长、较粗而蓬松，并有12条红暗相间的环纹。</text>
+  </view>
+</view>
+
+<view class='pos' wx:elif="{{current=='intro' && speciesType==2}}">
+  <text class='titleArea titleFont'>kǒng què\n</text>
+  <text class='titleArea titleFont'>孔雀\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Peacock\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Pavonini</text>
+  <view class='tagArea'>
+    <view class='tag'>雉科</view>
+    <view class='tag'>孔雀属</view>
+  </view>
+  <view class='imageArea'>
+    <image src='peacock1.jpg' class='imageFormat'></image>
+    <image src='peacock2.jpg' class='imageFormat'></image>
+    <image src='peacock3.jpg' class='imageFormat'></image>
+  </view>
+  <text class=' titleArea titleFont'>动物简介\n</text>
+  <view class='textArea'>
+    <text class='textFont'>孔雀，全长达2米以上，其中尾屏约1.5米，为鸡形目体型最大者。头顶翠绿，羽冠蓝绿而呈尖形；尾上覆羽特别长，形成尾屏，鲜艳美丽；真正的尾羽很短，呈黑褐色。雌鸟无尾屏，羽色暗褐而多杂斑。</text>
+  </view>
+</view>
+
+<view class='pos' wx:elif="{{current=='intro' && speciesType==3}}">
+  <text class='titleArea titleFont'>tiān é\n</text>
+  <text class='titleArea titleFont'>天鹅\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Swan\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Cygnus</text>
+  <view class='tagArea'>
+    <view class='tag'>鸭科</view>
+    <view class='tag'>天鹅属</view>
+  </view>
+  <view class='imageArea'>
+    <image src='swan1.jpg' class='imageFormat'></image>
+    <image src='swan2.jpg' class='imageFormat'></image>
+    <image src='swan3.jpg' class='imageFormat'></image>
+  </view>
+  <text class=' titleArea titleFont'>动物简介\n</text>
+  <view class='textArea'>
+    <text class='textFont'>天鹅，为鸭科中个体最大的类群。颈修长，超过体长或与身躯等长；嘴基部高而前端缓平，眼腺裸露；尾短而圆，尾羽20-24枚；蹼强大，但后趾不具瓣蹼。喜欢群栖在湖泊和沼泽地带，主要以水生植物为食，也吃螺类和软体动物。</text>
+  </view>
+</view>
+
+<view class='pos' wx:elif="{{current=='intro' && speciesType==4}}">
+  <text class='titleArea titleFont'>bái hè\n</text>
+  <text class='titleArea titleFont'>白鹤\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>White Crane\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Grus leucogeranus</text>
+  <view class='tagArea'>
+    <view class='tag'>鹤科</view>
+    <view class='tag'>鹤属</view>
+  </view>
+  <view class='imageArea'>
+    <image src='whitecrane1.jpg' class='imageFormat'></image>
+    <image src='whitecrane2.jpg' class='imageFormat'></image>
+    <image src='whitecrane3.jpg' class='imageFormat'></image>
+  </view>
+  <text class=' titleArea titleFont'>动物简介\n</text>
+  <view class='textArea'>
+    <text class='textFont'>白鹤，略小于丹顶鹤，体长130-140厘米。站立时通体白色，胸和前额鲜红色，嘴和脚暗红色；飞翔时，翅尖黑色，其余羽毛白色。虹膜棕黄色，嘴、脚暗红色。</text>
   </view>
 </view>
 
