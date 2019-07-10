@@ -1,17 +1,15 @@
 <!--index.wxml-->
-<div class="centerPos" wx:if="{{current=='search'}}">
-  <div class="circle" bindtap='uploadHandler'>
-    <div class="cameraPos">
-      <i-icon type="camera" size="120" />
-    </div>
-  </div>
-</div>
+<view wx:if="{{current=='search'}}">
+  <image class="background" src='background1.jpg'></image>
+    <image class="shotButton" src='shot.png' bindtap='uploadHandler'>
+    </image>
+</view>
 
-<div wx:if="{{current=='about'}}">
+<view wx:if="{{current=='about'}}">
   <image src='logo.png' class='logo'></image>
   <view class='version'>
     <text class='titleFont'>掌上动物园\n</text>
-    <text class='versionFont'>Version 1.0.3</text>
+    <text class='versionFont'>Version 1.1.0</text>
   </view>
   <i-cell-group class="cellPos">
     <i-cell i-class="cellFont" is-link url="/pages/featureInfo/index">功能介绍</i-cell>
@@ -20,7 +18,7 @@
   <view class='bottomPos'>
     <text class='bottomFont'>SCU掌上动物园团队 版权所有\nCopyright © 2018-2019 Mobile Zoo\nAll Rights Reserved</text>
   </view>
-</div>
+</view>
 
 
 <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">

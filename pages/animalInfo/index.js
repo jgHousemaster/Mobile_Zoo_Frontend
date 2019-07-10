@@ -10,7 +10,8 @@ Page({
     current: "result",
     picUrl: {},
     speciesResult: {},
-    speciesType: -1
+    speciesType: -1,
+    individualResult: {}
   },
   handleChange({ detail }) {
     this.setData({
@@ -21,6 +22,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(app.globalData)
     var result = "" //储存处理后的识别结果
     var type = -1
     if(app.globalData.speciesResult.length === 0){
@@ -37,7 +39,7 @@ Page({
           speciesString[i] = "大熊猫" + speciesString[i].slice(index)
           type = 0
         }
-        else if (name === "lesser panda") {
+        else if (name === "red panda") {
           speciesString[i] = "小熊猫" + speciesString[i].slice(index)
           type = 1
         }
@@ -53,13 +55,22 @@ Page({
           speciesString[i] = "白鹤" + speciesString[i].slice(index)
           type = 4
         }
+        else if (name === "siberian tiger"){
+          speciesString[i] = "西伯利亚虎" + speciesString[i].slice(index)
+          type = 5
+        }
         result += speciesString[i] + "\n"
       }
     }
+    var indRes = app.globalData.individualResult
+    if(indRes != 0){
+      indRes = parseInt(indRes.slice(8, -2))+1
+    }
     this.setData({
-     picUrl: 'https://zoo.scubrl.org/getPic/' + JSON.stringify(app.globalData.globalId).slice(1, -1) + '/',
+     picUrl: 'https://zoo.scubrl.org:8080/getPic/' + JSON.stringify(app.globalData.globalId).slice(1, -1) + '/',
       speciesResult: result,
-      speciesType: type
+      speciesType: type,
+      individualResult: indRes
     })
     
   },

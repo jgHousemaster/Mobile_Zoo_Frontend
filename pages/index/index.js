@@ -4,7 +4,7 @@ const app = getApp();
 function request(tmp_status, tmp_id) {
   if (tmp_status != 'done') {
     wx.request({
-      url: 'https://zoo.scubrl.org/getStatus/',
+      url: 'https://zoo.scubrl.org:8080/getStatus/',
       data: {
         id: tmp_id
       },
@@ -18,21 +18,10 @@ function request(tmp_status, tmp_id) {
         if (tmp_status == "done") {
           wx.hideLoading()
           app.globalData.uploading = 0
+          console.log(res.data)
           app.globalData.speciesResult = res.data.result
-          // wx.request({
-          //   url: 'https://zoo.scubrl.org/getStatus/',
-          //   data: {
-          //     id: 0
-          //   },
-          //   method: 'POST',
-          //   header: {
-          //     'content-type': 'application/json' // 默认值
-          //   },
-          //   success(res) {
-          //     console.log(res)
-          //     app.globalData.globalKind = res.data.name
-          //   }
-          // })
+          app.globalData.individualResult = res.data.individualRes
+          console.log(app.globalData.individualResult)
           wx.navigateTo({
             url: '/pages/animalInfo/index',
           })
@@ -75,7 +64,7 @@ Page({
             title: '加载中',
           })
           wx.uploadFile({
-            url: 'https://zoo.scubrl.org/upload/',
+            url: 'https://zoo.scubrl.org:8080/upload/',
             filePath: tempFilePaths[0],
             name: 'pic',
             formData: {

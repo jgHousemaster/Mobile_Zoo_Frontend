@@ -9,7 +9,38 @@
   </view>
   <view class='crossLine'></view>
   <view class='titleArea titleFont'>个体识别结果\n</view>
-  <view class='textArea'>
+  <view class='textArea' wx:if="{{speciesType==1}}">
+    <text class='textFont' wx:if="{{individualResult == 0}}">无个体识别结果</text>
+    <view wx:elif="{{individualResult == 1}}">
+      <view class='textFont'>欢欢</view>
+      <view class='textFont'>出生年份：2008 性别：雌性</view>
+      <view class='textFont'>身长: 53cm 体重: 30kg</view>
+      <image src="https://zoo.scubrl.org:8080/static/1欢欢.jpg" class='bigImageArea' mode='aspectFit'></image>
+    </view>
+    <view wx:elif="{{individualResult == 2}}">
+      <view class='textFont'>皮皮</view>
+      <view class='textFont'>出生年份：2007 性别：雄性</view>
+      <view class='textFont'>身长: 40cm 体重: 28kg</view>
+      <image src="https://zoo.scubrl.org:8080/static/2皮皮.jpg" class='bigImageArea' mode='aspectFit'></image>
+    </view>
+    <view wx:elif="{{individualResult == 3}}">
+      <view class='textFont'>奇奇</view>
+      <view class='textFont'>出生年份：2009 性别：雌性</view>
+      <view class='textFont'>身长: 45cm 体重: 33kg</view>
+      <image src="https://zoo.scubrl.org:8080/static/3奇奇.jpg" class='bigImageArea' mode='aspectFit'></image>
+    </view>
+    <view wx:elif="{{individualResult == 4}}">
+      <view class='textFont'>涵涵</view>
+      <view class='textFont'>出生年份：2012 性别：雌性</view>
+      <view class='textFont'>身长: 53cm 体重: 34kg</view>
+      <image src="https://zoo.scubrl.org:8080/static/4涵涵.jpg" class='bigImageArea' mode='aspectFit'></image>
+    </view>
+  </view>
+  <view class='textArea' wx:elif="{{speciesType==5}}">
+    <text class='textFont' wx:if="{{individualResult == 0}}">无个体识别结果</text>
+    <text class='textFont' wx:else>第{{individualResult}}号虎</text>
+  </view>
+  <view class='textArea' wx:else>
     <text class='textFont'>该物种暂不支持个体识别</text>
   </view>
 </view>
@@ -24,9 +55,9 @@
     <view class='tag'>大熊猫属</view>
   </view>
   <view class='imageArea'>
-    <image src='panda1.jpg' class='imageFormat'></image>
-    <image src='panda2.jpg' class='imageFormat'></image>
-    <image src='panda3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/panda1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/panda2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/panda3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
@@ -44,9 +75,9 @@
     <view class='tag'>小熊猫属</view>
   </view>
   <view class='imageArea'>
-    <image src='redpanda1.jpg' class='imageFormat'></image>
-    <image src='redpanda2.jpg' class='imageFormat'></image>
-    <image src='redpanda3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/redpanda1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/redpanda2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/redpanda3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
@@ -64,9 +95,9 @@
     <view class='tag'>孔雀属</view>
   </view>
   <view class='imageArea'>
-    <image src='peacock1.jpg' class='imageFormat'></image>
-    <image src='peacock2.jpg' class='imageFormat'></image>
-    <image src='peacock3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/peacock1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/peacock2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/peacock3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
@@ -84,9 +115,9 @@
     <view class='tag'>天鹅属</view>
   </view>
   <view class='imageArea'>
-    <image src='swan1.jpg' class='imageFormat'></image>
-    <image src='swan2.jpg' class='imageFormat'></image>
-    <image src='swan3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/swan1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/swan2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/swan3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
@@ -104,13 +135,33 @@
     <view class='tag'>鹤属</view>
   </view>
   <view class='imageArea'>
-    <image src='whitecrane1.jpg' class='imageFormat'></image>
-    <image src='whitecrane2.jpg' class='imageFormat'></image>
-    <image src='whitecrane3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/whitecrane1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/whitecrane2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/whitecrane3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
     <text class='textFont'>白鹤，略小于丹顶鹤，体长130-140厘米。站立时通体白色，胸和前额鲜红色，嘴和脚暗红色；飞翔时，翅尖黑色，其余羽毛白色。虹膜棕黄色，嘴、脚暗红色。</text>
+  </view>
+</view>
+
+<view class='pos' wx:elif="{{current=='intro' && speciesType==5}}">
+  <text class='titleArea titleFont'>xī bó lì yà hǔ\n</text>
+  <text class='titleArea titleFont'>西伯利亚虎\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Siberian Tiger\n</text>
+  <text class='titleArea titleFont' style=' color:#495060;font-style:oblique'>Panthera tygris altaica</text>
+  <view class='tagArea'>
+    <view class='tag'>猫科</view>
+    <view class='tag'>豹属</view>
+  </view>
+  <view class='imageArea'>
+    <image src='https://zoo.scubrl.org:8080/static/siberiantiger1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/siberiantiger2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.scubrl.org:8080/static/siberiantiger3.jpg' class='imageFormat'></image>
+  </view>
+  <text class=' titleArea titleFont'>动物简介\n</text>
+  <view class='textArea'>
+    <text class='textFont'>西伯利亚虎，又称东北虎，是虎的亚种之一。是现存体重最大的肉食性猫科动物，其中雄性体长可达3米左右，尾长约1米，体重达到350千克左右。野生西伯利亚虎体色夏毛棕黄色，冬毛淡黄色。背部和体侧具有多条横列黑色窄条纹，通常2条靠近呈柳叶状。</text>
   </view>
 </view>
 

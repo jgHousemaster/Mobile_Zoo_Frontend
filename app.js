@@ -37,6 +37,7 @@ App({
     userInfo: null,
     globalId: {},
     speciesResult: {},
+    individualResult: 0,
     uploading: 0
   }
 })

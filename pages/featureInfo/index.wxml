@@ -4,6 +4,9 @@
   <text style='font-size:48rpx'>功能介绍</text>
   <view class='line'></view>
   <view class='textArea'>
-    <text style='font-size:36rpx'>1.物种识别\n2.个体识别\n3.知识图谱</text>
+    <text style='font-size:36rpx'>1.识别用户提供的图片中的动物物种。\n
+2.对某些特定类别的动物(如小熊猫),可以识别个体并展示其专属信息。\n
+3.为游客推送定制化的动物的相关简介,提升小程序的趣味性及教育意义。\n
+</text>
   </view>
 </view>
