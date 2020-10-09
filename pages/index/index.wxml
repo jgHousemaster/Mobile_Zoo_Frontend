@@ -8,15 +8,15 @@
 <view wx:if="{{current=='about'}}">
   <image src='logo.png' class='logo'></image>
   <view class='version'>
-    <text class='titleFont'>掌上三维动物园\n</text>
-    <text class='versionFont'>Version 0.0.1</text>
+    <text class='titleFont'>掌上动物园\n</text>
+    <text class='versionFont'>Version 1.1.0</text>
   </view>
   <i-cell-group class="cellPos">
     <i-cell i-class="cellFont" is-link url="/pages/featureInfo/index">功能介绍</i-cell>
     <i-cell i-class="cellFont" is-link url="/pages/aboutUs/index">开发者</i-cell>
   </i-cell-group>
   <view class='bottomPos'>
-    <text class='bottomFont'>SCU掌上三维动物园团队 版权所有\nCopyright © 2019-2020 3D Mobile Zoo\nAll Rights Reserved</text>
+    <text class='bottomFont'>SCU掌上动物园团队 版权所有\nCopyright © 2018-2019 Mobile Zoo\nAll Rights Reserved</text>
   </view>
 </view>
 

@@ -9,7 +9,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f8f8f9",
-    "navigationBarTitleText": "掌上三维动物园",
+    "navigationBarTitleText": "掌上动物园",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
