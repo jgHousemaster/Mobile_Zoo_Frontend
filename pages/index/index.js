@@ -4,7 +4,7 @@ const app = getApp();
 function request(tmp_status, tmp_id) {
   if (tmp_status != 'done') {
     wx.request({
-      url: 'https://zoo.scubrl.org:8080/getStatus/',
+      url: 'https://zoo.cxh0519.cn:8080/getStatus/',
       data: {
         id: tmp_id
       },
@@ -64,7 +64,7 @@ Page({
             title: '加载中',
           })
           wx.uploadFile({
-            url: 'https://zoo.scubrl.org:8080/upload/',
+            url: 'https://zoo.cxh0519.cn:8080/upload/',
             filePath: tempFilePaths[0],
             name: 'pic',
             formData: {

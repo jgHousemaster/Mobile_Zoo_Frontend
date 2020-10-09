@@ -15,25 +15,25 @@
       <view class='textFont'>欢欢</view>
       <view class='textFont'>出生年份：2008 性别：雌性</view>
       <view class='textFont'>身长: 53cm 体重: 30kg</view>
-      <image src="https://zoo.scubrl.org:8080/static/1欢欢.jpg" class='bigImageArea' mode='aspectFit'></image>
+      <image src="https://zoo.cxh0519.cn:8080/static/1欢欢.jpg" class='bigImageArea' mode='aspectFit'></image>
     </view>
     <view wx:elif="{{individualResult == 2}}">
       <view class='textFont'>皮皮</view>
       <view class='textFont'>出生年份：2007 性别：雄性</view>
       <view class='textFont'>身长: 40cm 体重: 28kg</view>
-      <image src="https://zoo.scubrl.org:8080/static/2皮皮.jpg" class='bigImageArea' mode='aspectFit'></image>
+      <image src="https://zoo.cxh0519.cn:8080/static/2皮皮.jpg" class='bigImageArea' mode='aspectFit'></image>
     </view>
     <view wx:elif="{{individualResult == 3}}">
       <view class='textFont'>奇奇</view>
       <view class='textFont'>出生年份：2009 性别：雌性</view>
       <view class='textFont'>身长: 45cm 体重: 33kg</view>
-      <image src="https://zoo.scubrl.org:8080/static/3奇奇.jpg" class='bigImageArea' mode='aspectFit'></image>
+      <image src="https://zoo.cxh0519.cn:8080/static/3奇奇.jpg" class='bigImageArea' mode='aspectFit'></image>
     </view>
     <view wx:elif="{{individualResult == 4}}">
       <view class='textFont'>涵涵</view>
       <view class='textFont'>出生年份：2012 性别：雌性</view>
       <view class='textFont'>身长: 53cm 体重: 34kg</view>
-      <image src="https://zoo.scubrl.org:8080/static/4涵涵.jpg" class='bigImageArea' mode='aspectFit'></image>
+      <image src="https://zoo.cxh0519.cn:8080/static/4涵涵.jpg" class='bigImageArea' mode='aspectFit'></image>
     </view>
   </view>
   <view class='textArea' wx:elif="{{speciesType==5}}">
@@ -55,9 +55,9 @@
     <view class='tag'>大熊猫属</view>
   </view>
   <view class='imageArea'>
-    <image src='https://zoo.scubrl.org:8080/static/panda1.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/panda2.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/panda3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/panda1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/panda2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/panda3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
@@ -75,9 +75,9 @@
     <view class='tag'>小熊猫属</view>
   </view>
   <view class='imageArea'>
-    <image src='https://zoo.scubrl.org:8080/static/redpanda1.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/redpanda2.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/redpanda3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/redpanda1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/redpanda2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/redpanda3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
@@ -95,9 +95,9 @@
     <view class='tag'>孔雀属</view>
   </view>
   <view class='imageArea'>
-    <image src='https://zoo.scubrl.org:8080/static/peacock1.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/peacock2.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/peacock3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/peacock1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/peacock2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/peacock3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
@@ -115,9 +115,9 @@
     <view class='tag'>天鹅属</view>
   </view>
   <view class='imageArea'>
-    <image src='https://zoo.scubrl.org:8080/static/swan1.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/swan2.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/swan3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/swan1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/swan2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/swan3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
@@ -135,9 +135,9 @@
     <view class='tag'>鹤属</view>
   </view>
   <view class='imageArea'>
-    <image src='https://zoo.scubrl.org:8080/static/whitecrane1.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/whitecrane2.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/whitecrane3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/whitecrane1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/whitecrane2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/whitecrane3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
@@ -155,9 +155,9 @@
     <view class='tag'>豹属</view>
   </view>
   <view class='imageArea'>
-    <image src='https://zoo.scubrl.org:8080/static/siberiantiger1.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/siberiantiger2.jpg' class='imageFormat'></image>
-    <image src='https://zoo.scubrl.org:8080/static/siberiantiger3.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/siberiantiger1.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/siberiantiger2.jpg' class='imageFormat'></image>
+    <image src='https://zoo.cxh0519.cn:8080/static/siberiantiger3.jpg' class='imageFormat'></image>
   </view>
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>

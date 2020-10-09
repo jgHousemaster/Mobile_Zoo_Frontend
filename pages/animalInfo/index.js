@@ -59,6 +59,10 @@ Page({
           speciesString[i] = "西伯利亚虎" + speciesString[i].slice(index)
           type = 5
         }
+        else if (name === "cattle") {
+          speciesString[i] = "牦牛" + speciesString[i].slice(index)
+          type = 6
+        }
         result += speciesString[i] + "\n"
       }
     }
@@ -67,7 +71,7 @@ Page({
       indRes = parseInt(indRes.slice(8, -2))+1
     }
     this.setData({
-     picUrl: 'https://zoo.scubrl.org:8080/getPic/' + JSON.stringify(app.globalData.globalId).slice(1, -1) + '/',
+      picUrl: 'https://zoo.cxh0519.cn:8080/getPic/' + JSON.stringify(app.globalData.globalId).slice(1, -1) + '/',
       speciesResult: result,
       speciesType: type,
       individualResult: indRes
