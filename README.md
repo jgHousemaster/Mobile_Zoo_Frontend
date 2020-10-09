@@ -1,4 +1,4 @@
-## 掌上动物园
+## 掌上三维动物园
 
 * /pages/index/index
 
@@ -10,7 +10,11 @@
 
 * /pages/index/animalInfo
 
-  接收Id，显示动物详细信息，包括但不限于简介、图片等
+  接收Id，显示动物类别信息，包括但不限于简介、图片等
+  
+* /pages/index/3dmodel
+
+  显示动物三维图片
 
 前端采用iView框架
 
