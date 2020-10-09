@@ -18,4 +18,4 @@
 
 前端采用iView框架
 
-后段建议采用Django框架
+后端建议采用Django框架
