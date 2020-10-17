@@ -36,8 +36,9 @@ App({
   globalData: {
     userInfo: null,
     globalId: {},
-    speciesResult: {},
-    individualResult: 0,
-    uploading: 0
+    numResult: 0,
+    sub_id: 0,
+    uploading: 0,
+    URL: '127.0.0.1',
   }
 })
