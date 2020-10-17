@@ -4,7 +4,7 @@ const app = getApp();
 function request(tmp_status, tmp_id) {
   if (tmp_status != 'done') {
     wx.request({
-      url: 'https://zoo.cxh0519.cn:8080/getStatus/',
+      url: 'http://' + app.globalData.URL + ':8080/getStatus/',
       data: {
         id: tmp_id
       },
@@ -19,9 +19,7 @@ function request(tmp_status, tmp_id) {
           wx.hideLoading()
           app.globalData.uploading = 0
           console.log(res.data)
-          app.globalData.speciesResult = res.data.result
-          app.globalData.individualResult = res.data.individualRes
-          console.log(app.globalData.individualResult)
+          app.globalData.numResult = res.data.result
           wx.navigateTo({
             url: '/pages/animalInfo/index',
           })
@@ -29,7 +27,7 @@ function request(tmp_status, tmp_id) {
         else{
           setTimeout(function () {
             request(tmp_status, tmp_id)
-          }, 1000)
+          }, 2000)
         }
       }
     })
@@ -64,7 +62,7 @@ Page({
             title: '加载中',
           })
           wx.uploadFile({
-            url: 'https://zoo.cxh0519.cn:8080/upload/',
+            url: 'http://' + app.globalData.URL + ':8080/upload/',
             filePath: tempFilePaths[0],
             name: 'pic',
             formData: {

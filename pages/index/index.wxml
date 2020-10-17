@@ -16,7 +16,7 @@
     <i-cell i-class="cellFont" is-link url="/pages/aboutUs/index">开发者</i-cell>
   </i-cell-group>
   <view class='bottomPos'>
-    <text class='bottomFont'>SCU掌上动物园团队 版权所有\nCopyright © 2018-2019 Mobile Zoo\nAll Rights Reserved</text>
+    <text class='bottomFont'>SCU掌上三维动物园团队 版权所有\nCopyright © 2018-2019 Mobile Zoo\nAll Rights Reserved</text>
   </view>
 </view>
 

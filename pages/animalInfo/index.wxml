@@ -1,13 +1,22 @@
 <!--pages/animalInfo/index.wxml-->
 
-<view class='pos' wx:if="{{current=='result'}}">
+<view class='pos'>
   <image wx:if="{{picUrl.length > 0}}" src= '{{picUrl}}' class='bigImageArea' mode='aspectFit'></image>
   <view class='crossLine'></view>
-  <view class='titleArea titleFont'>物种识别结果\n</view>
+  <view class='titleArea titleFont'>鸟类识别结果\n</view>
   <view class='textArea'>
-    <text class='textFont'> {{speciesResult}}</text>
+    <text class='textFont'> 图中共有 {{numResult}} 只鸟！\n</text>
   </view>
-  <view class='crossLine'></view>
+  <view wx:if="{{numResult > 0}}">
+  <text class='textFont'> 请选择需要三维重建的鸟类编号： </text>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+</view>
+  <!-- <view class='crossLine'></view>
   <view class='titleArea titleFont'>个体识别结果\n</view>
   <view class='textArea' wx:if="{{speciesType==1}}">
     <text class='textFont' wx:if="{{individualResult == 0}}">无个体识别结果</text>
@@ -162,10 +171,9 @@
   <text class=' titleArea titleFont'>动物简介\n</text>
   <view class='textArea'>
     <text class='textFont'>西伯利亚虎，又称东北虎，是虎的亚种之一。是现存体重最大的肉食性猫科动物，其中雄性体长可达3米左右，尾长约1米，体重达到350千克左右。野生西伯利亚虎体色夏毛棕黄色，冬毛淡黄色。背部和体侧具有多条横列黑色窄条纹，通常2条靠近呈柳叶状。</text>
-  </view>
-</view>
+  </view> -->
 
-<i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
+<!-- <i-tab-bar current="{{ current }}" bindchange="handleChange" fixed="true">
   <i-tab-bar-item key="result" icon="search" current-icon="search" title="识别结果"></i-tab-bar-item>
   <i-tab-bar-item key="intro" icon="document" current-icon="document" title="动物简介"></i-tab-bar-item>
-</i-tab-bar>
+</i-tab-bar> -->
